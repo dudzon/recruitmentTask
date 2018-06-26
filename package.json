@@ -1,0 +1,27 @@
+{
+  "name": "rectask",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudzon/recruitmentTask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dudzon/recruitmentTask/issues"
+  },
+  "homepage": "https://github.com/dudzon/recruitmentTask#readme",
+  "description": "",
+  "dependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
