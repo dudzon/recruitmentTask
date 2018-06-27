@@ -17,9 +17,12 @@
   "homepage": "https://github.com/dudzon/recruitmentTask#readme",
   "description": "",
   "dependencies": {
+    "autoprefixer": "^8.6.4",
     "browser-sync": "^2.24.5",
     "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "postcss": "^6.0.23"
   },
   "devDependencies": {
     "gulp-sourcemaps": "^2.6.4"
