@@ -1,6 +1,6 @@
 //  STYLES FOR SCREENS SMALLER THAN 768px
 
-@media screen and (max-width:767.98px){
+@media screen and (max-width:767px){
     // STYLES FOR BROWSERS THAT SUPPORT CSS GRID
     @supports(display:grid){
         // CONTAINER 
@@ -70,6 +70,9 @@
                         font-weight:400;
                     }
                 }
+                .main-block__name--xshidden{
+                    display: none;
+                }
                 .main-block__button{
                     padding:0;
                     min-width:17.125rem;
@@ -117,6 +120,7 @@
                     line-height:1.875rem;
                     margin-top:15%;
                     text-align: center;
+                    margin-bottom:0;
                     &--value{
                         color:#D83550;
                     }
