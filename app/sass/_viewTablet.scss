@@ -1,11 +1,11 @@
 //  STYLES FOR SCREENS BETWEEN 768px AND 1200px
 
-@media (min-width:768px) and (max-width:1199px){
+@media screen and (max-width:1199.98px) and (min-width:768px){
     // STYLES FOR BROWSERS THAT SUPPORT CSS GRID
     @supports(display:grid){
         // CONTAINER 
         .container{
-            margin-bottom:2rem;
+            margin-top:2rem;
             display:grid;
             width: 100%;
             grid-template-columns: 20px repeat(5, 1fr);
@@ -15,7 +15,7 @@
             &__left-bar{
                 background:#FFBE33;
                 margin:0;
-                grid-row: 1 / 4;
+                grid-row: 1 / -1;
                 //  BAR TITLE
                 &--title{
                     writing-mode: vertical-rl;
@@ -39,11 +39,12 @@
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 position:relative;
             
                 .main-block__title{
                     margin:.8125rem 0 0 0;
-                    width:12.5rem;
+                    max-width:100%;
                     color: $textColor;
                     font-family: $mainFont;
                     font-size: .875rem;
@@ -51,7 +52,7 @@
                     font-weight:400;
                 }
                 .main-block__wrapper{
-                    margin:0;
+                    margin-left:-4.5rem;
                     display:flex;
                     height:30px;
                     align-items:center;
@@ -64,7 +65,7 @@
                     .main-block__name{
                         color: $textColor;
                         font-family: $mainFont;
-                        margin-top:.875rem;
+                        margin-top:.8rem;
                         font-size: .625rem;
                         line-height: 1rem;
                         font-weight:400;
@@ -74,12 +75,12 @@
                 .main-block__name--xshidden{
                     color: $textColor;
                     font-family: $mainFont;
-                    margin-top:.575rem;
+                    margin:0;
                     font-size: .625rem;
                     line-height: 1rem;
                     font-weight:400;
                     position:relative;
-                    left:20px;
+                    left:-20px;
                     &:before{
                         content:'';
                         width:7px;
@@ -100,7 +101,7 @@
                 }
                 &::after{
                     content: "";
-                    height:75px;
+                    height:90px;
                     background:#979797;
                     width:1px;
                     margin-right:-1rem;
@@ -194,7 +195,7 @@
                 }
                 .block__wrapper{
                     display:flex;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
                     margin-top:1rem;
                     .block__icon--eye,
                     .block__icon--weight{
@@ -209,7 +210,10 @@
     @supports (-ms-ime-align:auto) {
         /* IE Edge 12+ CSS styles go here */ 
         .container__left-bar--title{
-            top: -65px;
+            top: -15px;
+        }
+        .container .block8 .block__wrapper{
+            justify-content: space-around;
         }
       }
 }
