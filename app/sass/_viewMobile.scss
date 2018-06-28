@@ -2,7 +2,7 @@
 
 @media screen and (max-width:767.98px){
     // STYLES FOR BROWSERS THAT SUPPORT CSS GRID
-    @supports(display:grid){
+    @supports(display:grid) {
         // CONTAINER 
         .container{
             margin-bottom:2rem;
@@ -155,10 +155,7 @@
                 top:0;
                 right:0;
              }
-            //  .block3,
-            //  .block6{
-            //      margin-right:0;
-            //  }
+
             .block__icon{
                 width:20px;
                 height:20px;
