@@ -1,0 +1,217 @@
+//  STYLES FOR SCREENS BETWEEN 768px AND 1200px
+
+@media (min-width:768px) and (max-width:1199px){
+    // STYLES FOR BROWSERS THAT SUPPORT CSS GRID
+    @supports(display:grid){
+        // CONTAINER 
+        .container{
+            margin-bottom:2rem;
+            display:grid;
+            width: 100%;
+            grid-template-columns: 20px repeat(5, 1fr);
+            grid-template-rows: 6.875rem 6.875rem;
+            position:relative;
+            // CONTAINER LEFT YELLOW VERTICAL BAR
+            &__left-bar{
+                background:#FFBE33;
+                margin:0;
+                grid-row: 1 / 4;
+                //  BAR TITLE
+                &--title{
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg);
+                    font-size: .625rem;	
+                    line-height: .875rem;	
+                    text-align: center;	
+                    text-transform: uppercase;
+                    font-family: $mainFont;
+                    letter-spacing:1px;
+                    color: #FFFFFF;
+                    position:relative;
+                    top:65px;
+                    margin:0 0 0 3px;
+                }
+            }
+            // CONTAINER MAIN BLOCK
+            &__main-block{
+                grid-column: 2 / 4;      
+                min-width: 90%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                position:relative;
+            
+                .main-block__title{
+                    margin:.8125rem 0 0 0;
+                    width:12.5rem;
+                    color: $textColor;
+                    font-family: $mainFont;
+                    font-size: .875rem;
+                    line-height: 1.3125rem;
+                    font-weight:400;
+                }
+                .main-block__wrapper{
+                    margin:0;
+                    display:flex;
+                    height:30px;
+                    align-items:center;
+                    .main-block__image{
+                        width:10px;
+                        height:10px;
+                        margin-right:.625rem;
+                        margin-top:10px;
+                    }
+                    .main-block__name{
+                        color: $textColor;
+                        font-family: $mainFont;
+                        margin-top:.875rem;
+                        font-size: .625rem;
+                        line-height: 1rem;
+                        font-weight:400;
+                        margin-bottom:0;
+                    }
+                }
+                .main-block__name--xshidden{
+                    color: $textColor;
+                    font-family: $mainFont;
+                    margin-top:.575rem;
+                    font-size: .625rem;
+                    line-height: 1rem;
+                    font-weight:400;
+                    position:relative;
+                    left:20px;
+                    &:before{
+                        content:'';
+                        width:7px;
+                        height:7px;
+                        border-radius:50%;
+                        background:#FFBE33;
+                        position:absolute;
+                        left:-20px;
+                        top:4px;
+                    
+                    }
+                }
+                .main-block__button{
+                    display: none;
+                }
+                .main-block__icon{
+                    display:none;
+                }
+                &::after{
+                    content: "";
+                    height:75px;
+                    background:#979797;
+                    width:1px;
+                    margin-right:-1rem;
+                    opacity:.2;
+                    position:absolute;
+                    top:0;
+                    right:0;
+                }
+            }
+            //  BLOCKS
+            .block1,.block2,.block3,.block4,
+            .block5,.block6,.block7{
+                position:relative;
+                align-self: flex-start;
+                justify-self: center;
+                width:80%;
+                margin:0 auto;
+                .block__text{
+                    color:$textColor;
+                    font-family: $mainFont;
+                    font-size:1.25rem;
+                    line-height:1.875rem;
+                    margin-top:15%;
+                    margin-bottom:0;
+                    text-align: center;
+                    &--value{
+                        color:#D83550;
+                    }
+                    small{
+                        font-family: $mainFont;
+                        font-size: .625rem;
+                        line-height: 1rem; 
+                        color:$textColor;
+                        margin-left:1px;
+                    }
+                }
+                .block__desc{
+                    color:$textColor;
+                    font-family: $mainFont;
+                    font-size: .625rem;
+                    line-height: 1rem; 
+                    display: block;
+                    text-align: center;
+                }
+            }
+            .block1::after,
+            .block2::after,
+            .block4::after,
+            .block5::after,
+            .block6::after,
+            .block7::after{
+                content: "";
+                height:90px;
+                background:#979797;
+                width:1px;
+                margin-right:-1rem;
+                opacity:.2;
+                position:absolute;
+                top:0;
+                right:0;
+             }
+            .block__icon{
+                width:20px;
+                height:20px;
+            }
+            .block7{
+                grid-column: 5/ 6;
+                .block__desc{
+                    margin-left:-3px;
+                }
+            }
+            .block8{
+                display:block;
+                justify-self: flex-start;
+                align-self: center;
+                margin:0 auto;
+                .block__button{
+                    width:85px;
+                    height:34px;
+                    border-radius:4px;
+                    background: linear-gradient(90deg, #D22D4F 0%, #F86358 100%);
+                    box-shadow: 0 2px 4px 0 rgba(250,91,30,0.34);
+                    border:none;
+                    color:#fff;
+                    font-family:$mainFont;
+                    text-transform: uppercase;
+                    font-size: .625rem;
+                    line-height:1rem;
+                    font-weight:600;
+                    letter-spacing:1px;
+                }
+                .block__wrapper{
+                    display:flex;
+                    justify-content: space-between;
+                    margin-top:1rem;
+                    .block__icon--eye,
+                    .block__icon--weight{
+                        height:20px;
+                        width:20px;
+                        cursor:pointer;
+                    }
+                }
+            }
+        }
+    }
+    @supports (-ms-ime-align:auto) {
+        /* IE Edge 12+ CSS styles go here */ 
+        .container__left-bar--title{
+            top: -65px;
+        }
+      }
+}
+
+
